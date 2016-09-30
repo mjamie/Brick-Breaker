@@ -26,4 +26,10 @@ public class Ball : MonoBehaviour {
 			}
 		}
 	}
+
+	void onCollisionEnter2D (Collision2D collision) {
+		Vector2 tweek = new Vector2(Random.Range (0f,0.2f),Random.Range (0f,0.2f));
+		this.GetComponent <Rigidbody2D>().velocity += tweek;
+
+	}
 }
